@@ -41,5 +41,5 @@ An end-to-end full-stack application that enables **natural language querying of
 
 ### Clone Repository
 ```bash
-git clone https://github.com/yourusername/ecommerce-ai-db.git
+git clone https://github.com/jagveersandhu/ecommerce-ai-db.git
 cd ecommerce-ai-db
