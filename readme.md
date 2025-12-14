@@ -11,7 +11,7 @@ An end-to-end full-stack application that enables **natural language querying of
 - SQL safety filtering (no destructive queries)
 - FastAPI backend with SQLAlchemy ORM
 - Gradio frontend for user interaction
-- Explainable SQL generation (optional debug view)
+- Explainable SQL generation
 
 ---
 
