@@ -7,15 +7,12 @@ def run_ai_query(question):
     try:
         result = ai_query(question)
 
-        # If tabular data
         if isinstance(result, list):
             return pd.DataFrame(result)
 
-        # If string → extract final answer
         if isinstance(result, str):
             lines = result.strip().split("\n")
 
-            # Heuristic: last meaningful line
             final_answer = lines[-1]
 
             return pd.DataFrame(
@@ -43,7 +40,6 @@ with gr.Blocks(title="E-commerce AI Dashboard") as demo:
         placeholder="e.g. Show top 5 users"
     )
 
-    # Example Prompts (STEP 4)
     gr.Examples(
         examples=[
             "Show top 5 users",
@@ -56,7 +52,6 @@ with gr.Blocks(title="E-commerce AI Dashboard") as demo:
 
     run_btn = gr.Button("Run Query")
 
-    # STEP 5 — Dataframe Output
     output = gr.Dataframe(
         label="Query Result",
         wrap=True,

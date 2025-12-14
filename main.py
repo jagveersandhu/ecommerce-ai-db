@@ -6,7 +6,6 @@ from sql_agent import run_query
 
 app = FastAPI(title="E-commerce API", version="1.0")
 
-# Dependency to get DB session
 def get_db():
     db = database.SessionLocal()
     try:

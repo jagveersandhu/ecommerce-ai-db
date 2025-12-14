@@ -10,7 +10,7 @@ agent = create_sql_agent(
     llm=llm,
     db=db,
     verbose=False,
-    agent_type="openai-tools",  # works with Ollama too
+    agent_type="openai-tools", 
 )
 
 FORBIDDEN = ["delete", "drop", "truncate", "update", "insert", "alter"]
@@ -18,7 +18,6 @@ FORBIDDEN = ["delete", "drop", "truncate", "update", "insert", "alter"]
 def run_query(question: str):
     lower_q = question.lower()
 
-    # HARD BLOCK destructive intent
     if any(word in lower_q for word in FORBIDDEN):
         return "Destructive queries are not allowed."
 

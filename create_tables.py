@@ -1,6 +1,5 @@
-# create_tables.py
 from database import Base, engine
-import models  # ensures all models are loaded
+import models 
 
 Base.metadata.create_all(bind=engine)
 print("All tables created successfully!")
