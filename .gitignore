@@ -17,6 +17,7 @@ Thumbs.db
 
 # Gradio cache
 gradio_cached_examples/
+.gradio/
 
 # Logs
 *.log
